@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const QuestionForm = ({ addQuestion }) => {
+const NewQuestionForm = ({ addQuestion }) => {
   const [prompt, setPrompt] = useState('');
   const [answers, setAnswers] = useState(['', '']);
   const [correctIndex, setCorrectIndex] = useState(0);
@@ -14,7 +14,7 @@ const QuestionForm = ({ addQuestion }) => {
   };
 
   const handleAnswerChange = (index, value) => {
-    setAnswers(prevAnswers => {
+    setAnswers((prevAnswers) => {
       const newAnswers = [...prevAnswers];
       newAnswers[index] = value;
       return newAnswers;
@@ -61,4 +61,4 @@ const QuestionForm = ({ addQuestion }) => {
   );
 };
 
-export default QuestionForm;
+export default NewQuestionForm;

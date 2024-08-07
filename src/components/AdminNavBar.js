@@ -1,12 +1,13 @@
-import React from "react";
+import React from 'react';
 
-function AdminNavBar({ onChangePage }) {
+const AdminNavBar = ({ showForm, setShowForm }) => {
   return (
     <nav>
-      <button onClick={() => onChangePage("Form")}>New Question</button>
-      <button onClick={() => onChangePage("List")}>View Questions</button>
+      <button onClick={() => setShowForm(!showForm)}>
+        {showForm ? 'View Questions' : 'New Question'}
+      </button>
     </nav>
   );
-}
+};
 
 export default AdminNavBar;
